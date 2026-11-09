@@ -1,0 +1,73 @@
+/* @import url() FONT IMPORTS MUST ALWAYS BE AT THE VERY TOP OF THIS FILE, ABOVE THE TAILWIND IMPORT — DO NOT DELETE THIS COMMENT */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* CRITICAL: THE FOLLOWING TAILWIND IMPORT MUST NEVER BE DELETED — DO NOT DELETE THIS COMMENT */
+@import 'tailwindcss';
+/* END TAILWIND IMPORTS — ALL OTHER CSS MUST GO BELOW THIS LINE */
+
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --color-canvas: #f6f5f1;
+  --color-surface: #ffffff;
+  --color-sunken: #efede7;
+  --color-line: #e4e1d9;
+  --color-line-strong: #cfcbc1;
+  --color-ink: #17191b;
+  --color-ink-2: #3d4145;
+  --color-muted: #62676c;
+
+  --color-brand: #1d5a42;
+  --color-brand-hover: #174a36;
+  --color-brand-soft: #e3eee8;
+  --color-brand-ink: #123b2b;
+
+  --color-danger: #b42318;
+  --color-danger-soft: #fbeae8;
+  --color-warn: #a14a06;
+  --color-warn-soft: #fdf0e1;
+
+  --color-cat-food: #c2532b;
+  --color-cat-groceries: #4f7a2a;
+  --color-cat-transport: #2f6690;
+  --color-cat-home: #7b5ea7;
+  --color-cat-bills: #9a6b12;
+  --color-cat-health: #b83e6a;
+  --color-cat-fun: #1f7f80;
+  --color-cat-shopping: #6b6255;
+
+  --ease-out-strong: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: 'cv11', 'ss01';
+}
+
+.num {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
